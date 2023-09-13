@@ -3,7 +3,7 @@
 
   const generations = Object.keys(DATA);
 
-  let selectedGeneration = generations[2];
+  let selectedGeneration = generations[1];
 
   let selectedColumns: string[] = [];
 
