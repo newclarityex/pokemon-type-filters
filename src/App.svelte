@@ -56,7 +56,7 @@
 
   <button
     class={`mx-2 border border-black ${amongus ? "bg-blue-400" : ""}`}
-    on:click={() => (amongus = !amongus)}>Amongus Mode</button
+    on:click={() => (amongus = !amongus)}>Amongus</button
   >
 
   <h1>Click the column labels below to view resulting damage.</h1>
