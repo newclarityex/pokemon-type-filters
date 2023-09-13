@@ -5,6 +5,13 @@
 
   let selectedGeneration = generations[1];
 
+  function updateGeneration(generation: string) {
+    selectedGeneration = generation;
+
+    const types = Object.keys(DATA[selectedGeneration]);
+    selectedColumns = selectedColumns.filter((type) => types.includes(type));
+  }
+
   let selectedColumns: string[] = [];
 
   function toggleColumn(type: string) {
@@ -65,7 +72,7 @@
       class={`mx-2 border border-black ${
         selectedGeneration === generation ? "bg-blue-400" : ""
       }`}
-      on:click={() => (selectedGeneration = generation)}
+      on:click={() => updateGeneration(generation)}
     >
       {generation}
     </button>
